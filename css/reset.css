@@ -1,0 +1,55 @@
+/* Box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  margin: 0;
+}
+
+/* Remove list styles where role=list is used */
+ul[role='list'], ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */nhtml:focus-within {
+  scroll-behavior: smooth;
+}
+html, body {
+  height: 100%;
+}
+
+/* Body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve defaults for links */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Form elements should inherit font */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
