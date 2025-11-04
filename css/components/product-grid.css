@@ -1,3 +1,7 @@
+.grid-section {
+    padding: 40px 0;
+}
+
 .card {
     background-position: center;
     background-size: cover;
